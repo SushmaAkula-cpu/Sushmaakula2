@@ -35,7 +35,7 @@ category = st.selectbox("Select a Category", data['Category'])
 
 st.write("### (2) add a multi-select for Sub_Category in the selected Category (1) (https://docs.streamlit.io/library/api-reference/widgets/st.multiselect)")
 sub_categories = data['Sub_Category'][category]
-    selected_sub_categories = st.multiselect(f"Select Sub-Categories in {category}", sub_categories)
+selected_sub_categories = st.multiselect(f"Select Sub-Categories in {category}", sub_categories)
 st.write(f"Selected Category: {category}")
 st.write(f"Selected Sub-Categories: {selected_sub_categories}")
   filtered_df = df[(df['Category'] == category) & (df['Sub_Category'].isin(selected_sub_categories))]
