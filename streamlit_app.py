@@ -34,7 +34,7 @@ st.write("### (1) add a drop down for Category (https://docs.streamlit.io/librar
 category = st.selectbox("Select a Category", df['Category'])
 
 st.write("### (2) add a multi-select for Sub_Category in the selected Category (1) (https://docs.streamlit.io/library/api-reference/widgets/st.multiselect)")
-sub_categories = data['Sub_Category'][category]
+sub_categories = df['Sub_Category'][category]
 selected_sub_categories = st.multiselect(f"Select Sub-Categories in {category}", sub_categories)
 st.write(f"Selected Category: {category}")
 st.write(f"Selected Sub-Categories: {selected_sub_categories}")
